@@ -1,0 +1,705 @@
+h1
+    width: -moz-fit-content
+    width: fit-content
+
+@keyframes snow
+    0%
+        background-position: 0px 0px, 0px 0px, 0px 0px
+    100%
+        background-position: 600px 1800px, 600px 1200px, 600px 600px
+
+.sneg
+    position: fixed
+    background: url("../img-2/background1.png"), url("../img-2/background2.png"), url("../img-2/background3.png")
+    filter: blur(2px)
+    height: 100vh
+    width: 100%
+    animation: snow 30s linear infinite
+
+#cursor, #aura
+    display: block
+    position: fixed
+    pointer-events: none
+    top: 50%
+    left: 50%
+    pointer-events: none
+    z-index: 10000
+    &.hiden
+        -o-transform: none !important
+        -moz-transform: none !important
+        -ms-transform: none !important
+        -webkit-transform: none !important
+        transform: none !important
+        -webkit-animation: none !important
+        -moz-animation: none !important
+        -o-animation: none !important
+        -ms-animation: none !important
+        animation: none !important
+        transform: translate(-50%, -50%) scale(0.019)
+        width: 0px
+        height: 0px
+        
+
+#cursor
+    background: url('../cursor/cursormiddle@2x.png')
+    width: 28px
+    height: 28px
+    background-size: 100%
+    background-position: center
+    transform: translate(-50%, -50%)
+
+#aura
+    // transition: 0.05s
+    background: url('../cursor/cursor@2x.png')
+    width: 68px
+    height: 68px
+    background-size: 100%
+    background-position: center
+    // transform: translate(-50%, -50%)
+    //
+    -webkit-animation-name: rotation
+    -webkit-animation-duration: 5s
+    -webkit-animation-iteration-count: infinite
+    -webkit-animation-timing-function: linear
+    -moz-animation-name: rotation
+    -moz-animation-duration: 5s
+    -moz-animation-iteration-count: infinite
+    -moz-animation-timing-function: linear
+    -o-animation-name: rotation
+    -o-animation-duration: 5s
+    -o-animation-iteration-count: infinite
+    -o-animation-timing-function: linear
+    animation-name: rotation
+    animation-duration: 5s
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    a:hover
+        transform: translate(-50%, -50%) scale(1.5)
+        opacity: .5
+
+body
+    background-color: #888888
+    max-height: 100vh
+    overflow-x: hidden
+// .box
+//     background: url("../img-2/Shuuzo.png")
+//     filter: blur(5px)
+//     width: 100%
+//     height: 100vh
+//     background-size:100%
+//     background-position: top
+
+.move-z
+    position: static
+    opacity: 1
+    isolation: auto
+
+.img-logo-1
+    // background: url("../img-2/logo.png")
+    background: url("../img-2/NO-NLfon.png")
+    width: 1000px
+    height: 100px
+    // width: 50%
+    // height: 9%
+    background-size: 100%
+    background-position: center
+    position: relative
+    z-index: 2
+    margin: auto
+    top: calc( 50% - 50px )
+    
+.img-logo-2
+    // background: url("../img-2/logo-2.png")
+    background: url("../img-2/NO-NLbac.png")
+    width: 1000px
+    height: 100px
+    background-size: 100%
+    background-position: center
+    position: relative
+    top: calc( 50% - 130px )
+    z-index: 1
+    margin: auto
+    opacity: 1
+    filter: blur(3px)
+    
+    
+.logods
+    height: 100vh
+    width: 100%
+    position: sticky
+    z-index: 2
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+.divs
+    position: absolute
+    height: 100vh
+    width: 100%
+ 
+
+::-webkit-scrollbar
+    width: 0px
+
+.box-content
+    background-color: rgb(24,23,28)
+    position: relative
+    z-index: 3
+    font-size: 21px
+
+.box-content *
+    font: normal 'tahoma'
+    font-weight: 300
+    
+
+.box-content::before
+    content: ''
+    position: absolute
+    top: -300px
+    left: 0
+    width: 100%
+    height: 300px
+    background: linear-gradient(0deg, rgba(24,23,28,1) 18%, rgba(24,23,28,0) 100%)
+
+.text-box
+    width: 90%
+    height: 100%
+    margin: auto
+    p, h1
+        z-index: 10
+        color: #fff
+        position: relative
+        text-align: justify
+        text-shadow: #e0e0e0 1px 1px 5px
+    h1
+        font-size: 60px
+        font: 'tahoma'
+        font-weight: 900
+    .title-1
+        position: relative
+        z-index: 4
+        margin: auto
+        width: -moz-fit-content
+        width: fit-content
+        padding-top: 70px
+
+.uet > span
+    font-size: 60px
+    font: 'tahoma'
+    font-weight: 900
+    text-shadow: #e0e0e0 3px 3px 5px
+    
+.info_serv_text
+    overflow-y: hidden 
+    max-height: 100vw
+    margin-top: 340px
+    padding-top: 50px
+    // height: 100%
+    position: relative
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-between
+    align-items: flex-start
+    align-content: space-around
+
+.collum-1, .collum-2
+    width:60%
+    height: 100%
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    justify-content: space-between
+    align-content: space-between
+    align-items: center
+
+.content-1
+    
+    opacity: 0
+    max-width: 60%
+    // background-color: #ee7c7c79
+    position: relative
+    // float: right
+    transition: 1s cubic-bezier(.46,-0.77,.51,1.6) opacity
+    
+.content-2
+    
+    margin-top: 70% 
+    opacity: 0
+    max-width: 60%
+    // background-color: #ee7c7c79
+    position: relative
+    transition: 1s cubic-bezier(.46,-0.77,.51,1.6) opacity
+
+.content-3
+    margin-top: 40% 
+    opacity: 0
+    max-width: 60%
+    // background-color: #ee7c7c79
+    position: relative
+    transition: 1s cubic-bezier(.46,-0.77,.51,1.6) opacity
+
+.content-4
+    margin-top: 70% 
+    opacity: 0
+    max-width: 60%
+    // background-color: #ee7c7c79
+    position: relative
+    transition: 1s cubic-bezier(.46,-0.77,.51,1.6) opacity
+
+.info_serv_text div p
+    transition: 1s cubic-bezier(.46,-0.77,.51,1.6) transform
+    transform: scale(2)
+
+
+@mixin for-content()
+    background-color: #ee7c7c7a
+    position: absolute
+    top: 0px
+    left: 20px
+    opacity: 0
+    width:100%
+    height: 50px
+    transition: 1s cubic-bezier(.46,-0.77,.51,1.6) transform, 0.7s cubic-bezier(.46,-0.77,.51,1.6) opacity
+
+.fon-content-1, .fon-content-2, .fon-content-3, .fon-content-4
+    @include for-content()
+      
+// .fon-content-2
+//     @include for-content()
+    
+// .fon-content-3
+//     @include for-content()
+    
+// .fon-content-4
+//     @include for-content()
+   
+.fon-mem
+    background: url("../img-2/fon_mem.png")
+    width: 1200px
+    height: 750px
+    margin-top: 100px
+    left: calc( 100% - 50% - 600px )
+    background-size: 100%
+    background-position: center
+    position: absolute
+    z-index: 1
+    opacity: 0.3
+    transition: all 0.15s cubic-bezier(.12,.76,.17,.97)
+    
+.collum-1, .collum-2
+    z-index: 2
+    
+//--------------------------------------Круги осу ----------------------------------------
+@mixin krug()
+    width: 100px
+    height: 100px
+    background-size: 100%
+    background-position: center
+    position: absolute
+
+@mixin line-include()
+    background: url("../img-2/osu-krugi/followpoint.png")
+    width: 280px
+    height: 14px
+    background-size: 100%
+    background-position: center
+    position: absolute
+    
+@mixin sliderfollowcircle_all()
+    background: url("../img-2/osu-krugi/sliderfollowcircle.png")
+    width: 100px
+    height: 100px
+    background-size: 100%
+    background-position: center
+    position: absolute
+    
+
+.krug-osu
+    position: absolute
+    left: 100px
+    .conthitcircleoverlay-1
+        opacity: 0
+        position: relative
+        z-index: 2
+        top: 30px
+        left: 500px
+        .hitcircleoverlay
+            background: url("../img-2/osu-krugi/hitcircle.png")
+            @include krug()
+        .sliderfollowcircle
+            background: url("../img-2/osu-krugi/sliderfollowcircle.png")
+            @include sliderfollowcircle_all()
+
+    .conthitcircleoverlay-2
+        opacity: 0
+        position: relative
+        z-index: 2
+        top: -70px
+        left: 1000px
+        .hitcircleoverlay
+            background: url("../img-2/osu-krugi/hitcircle2.png")
+            @include krug()
+        .followpoint-2
+            @include line-include()
+            transform: rotate(29deg)
+            top: -40px
+            left: -240px
+        .sliderfollowcircle
+            background: url("../img-2/osu-krugi/sliderfollowcircle.png")
+            @include sliderfollowcircle_all()
+
+    .conthitcircleoverlay-3
+        opacity: 0
+        position: relative
+        z-index: 2
+        top: -230px
+        left: 700px
+        .hitcircleoverlay
+            background: url("../img-2/osu-krugi/hitcircle1.png")
+            @include krug()
+        .followpoint-1
+            @include line-include()
+            width: 300px
+            transform: rotate(-52deg)
+            top: 170px
+            left: -200px
+        .sliderfollowcircle
+            background: url("../img-2/osu-krugi/sliderfollowcircle.png")
+            @include sliderfollowcircle_all()
+        
+._sliderfollowcircle
+    transform: scale(6)
+    opacity: 0
+    @include sliderfollowcircle_all()
+    animation: slider_zoom 1.2s forwards
+        
+@keyframes slider_zoom
+    0%
+        transform: scale(5)
+        opacity: 0
+    33%
+        transform: scale(1)
+        opacity: 1
+    100%
+        transform: scale(1)
+        opacity: 1   
+
+._sliderfollowcircle2
+    transform: scale(3)
+    opacity: 0
+    @include sliderfollowcircle_all()
+    animation: slider_zoom1 1.2s forwards
+        
+@keyframes slider_zoom1
+    33%
+        transform: scale(5)
+        opacity: 0
+    66%
+        transform: scale(1)
+        opacity: 1
+    100%
+        transform: scale(1)
+        opacity: 1   
+._sliderfollowcircle1
+    transform: scale(6)
+    opacity: 0
+    @include sliderfollowcircle_all()
+    animation: slider_zoom2 1.2s forwards
+        
+@keyframes slider_zoom2
+    66%
+        transform: scale(5)
+        opacity: 0
+    100%
+        transform: scale(1)
+        opacity: 1 
+
+.contener-title
+    position: relative
+
+.square-animation
+    animation: ani1 1s forwards
+
+@keyframes ani1 
+    0% 
+        opacity: 0
+    33%
+        opacity: 1
+    100%
+        opacity: 1
+        filter: blur(0)
+
+.square-animation2
+    animation: ani2 1s forwards
+
+@keyframes ani2 
+    33% 
+        opacity: 0
+    66%
+        opacity: 1
+    100%
+        opacity: 1
+        filter: blur(0)
+
+.square-animation3
+    animation: ani3 1s forwards
+
+@keyframes ani3 
+    66% 
+        opacity: 0
+    100%
+        opacity: 1
+        filter: blur(0)
+
+.ue
+    opacity: 0
+
+.anim-items
+    max-width: 50ch
+    text-align: center
+    transform: scale(0.94)
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1)
+
+@keyframes scale 
+  100% 
+    transform: scale(1)
+  
+span 
+  display: inline-block
+  opacity: 0
+  filter: blur(4px)
+
+.fon1
+    position: absolute
+    z-index: 3
+    width: 1300px
+    height: 600px
+    background-color: rgb(24,23,28)
+    top:-360px
+    opacity: 0.8
+    
+.top-tt-box
+    padding-top: 50px 
+    position: relative
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-content: stretch
+    justify-content: space-around
+    align-items: stretch
+    .collum-top-tt2, .collum-top-tt1
+        z-index: 2
+    .collum-top-tt2
+        padding-top: 30% 
+    div div video
+        width: 65%
+        align-items: center
+        z-index: 3
+.dostig-h1
+    margin-left: 8%
+    margin-top: 200px 
+    margin-bottom: 200px
+    // font-size: 100px 
+   
+
+.content-top-tt-koll1-el1, .content-top-tt-koll1-el2, .content-top-tt-koll2-el1, .content-top-tt-koll2-el2
+    position: relative
+    transition: .2s
+    top: 300px
+    margin-bottom: 65% 
+    display: flex
+    justify-content: center
+    .fon-content-tt1_1, .fon-content-tt1_2, .fon-content-tt2_1, .fon-content-tt2_2
+        transition: .2s
+        position: absolute
+        top:-35px
+        width: 76%
+        height: 107%
+        border: 10px solid #fff
+        z-index: 2
+    .ramka
+        position: absolute
+        top:-3px
+        width: 66%
+        height: 100%
+        border: 3px solid #fff
+        z-index: 4
+        // border-radius: 10px
+.content-top-tt-koll2-el2
+    margin-bottom: 0
+
+.fon_mem_stonks
+    background: url("../img-2/stonks_1.webp")
+    top: 700px
+    width: 810px
+    height: 600px
+    background-size: 100%
+    background-position: center
+    position: absolute
+    z-index: 1
+    filter: blur(4px)
+    opacity: 0.6
+//-------------------------О сервере -------------------------------------
+
+ 
+@keyframes fade-in 
+  100% 
+    opacity: 1
+    filter: blur(0)
+  
+
+.begstrok
+    white-space: nowrap
+    width: 100vw
+    position: relative
+    left: -6%
+    text-transform: uppercase
+    .text
+        animation: strokanim 300s linear infinite alternate
+        h1
+            //color:rgb(24, 23, 28)
+            font: 900 normal 2.5em 'tahoma'
+            color: rgb(24 23 28)
+            font-size:150px
+            text-shadow:-0   -1px 2px #FFFFFF, 0   -1px 2px #FFFFFF,-0    1px 2px #FFFFFF, 0    1px 2px #FFFFFF,-1px -0   2px #FFFFFF, 1px -0   2px #FFFFFF,-1px  0   2px #FFFFFF, 1px  0   2px #FFFFFF,-1px -1px 2px #FFFFFF, 1px -1px 2px #FFFFFF,-1px  1px 2px #FFFFFF, 1px  1px 2px #FFFFFF,-1px -1px 2px #FFFFFF, 1px -1px 2px #FFFFFF,-1px  1px 2px #FFFFFF, 1px  1px 2px #FFFFFF
+
+@keyframes strokanim
+    from
+        transform: translateX(0%)
+    to
+        transform: translateX(-1000%)
+
+.spisok_prich
+    margin: 0
+    position: relative
+
+.window_prich
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-around
+    align-items: center
+
+.mem-kach
+    width: 800px
+    height: 500px
+    //box-shadow: 0 0 3px 4px rgb(24, 23, 28) inset
+    position: relative
+    // border-radius: 100em
+    
+.anim_mem_kach
+    animation: meme_kach_anim 5s cubic-bezier(0,1.01,0,1.01) 1
+
+@keyframes meme_kach_anim
+    0%
+        opacity: 0
+    30%
+        opacity: 1
+    28%
+        opacity: 1
+    30%
+        opacity: 1
+    70%
+        opacity: 1
+    100%
+        opacity: 0
+
+.word 
+    margin: auto
+    color: white
+    text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324
+
+.bg-image 
+    z-index: 2
+    filter: blur(1px)
+
+.bg-image-blur, .bg-image 
+    background: url('')
+    position:absolute
+    top:0
+    left:0
+    width: 100%
+    height:100%
+.bg-image-blur
+    z-index: 1 
+    -webkit-filter: blur(20px)
+    -moz-filter: blur(20px)
+    -o-filter: blur(20px)
+    -ms-filter: blur(20px)
+    filter: blur(20px)
+
+.topblok
+    position: absolute
+    background: rgb(24, 23, 28)
+    bottom: 0
+    //background-color: rgb(24, 23, 28)
+    width: 100%
+    //height: 100%
+    z-index: 2
+
+.topblok::before
+    content: ''
+    position: absolute
+    left: 0
+    transform: translate(0, -90%)
+    width: 100%
+    height: 100%
+    background: linear-gradient(0deg, rgba(24, 23, 28,1) 19%, rgba(24, 23, 28,0) 29%)
+.text_anim_mem
+        animation: meme_kach_anim_text 2.3s cubic-bezier(.19,.21,1,.73) 1
+
+@keyframes meme_kach_anim_text
+    0%
+        height: 100%
+    100%
+        height: 0%
+
+.admininfo
+    
+    .sekt_inf
+        background-color: #ffffff0a
+        padding-top:30px
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-content: flex-start
+        justify-content: space-evenly
+        align-items: center
+        width: 100%
+        .block
+            display: flex
+            flex-direction: column
+            margin: 0 15px 50px 15px
+            width: 13%
+            .image_user
+                width: 100%
+                position: relative
+                padding-bottom: 100%
+                
+            div img
+                background: url('../img-2/avatar_user/user1.jpg')
+                background-size: 100%
+                background-position: cover
+                object-fit: cover
+                border-radius: 50%
+                position: absolute
+                width: 100%
+                height: 100%
+                border-radius: 50%
+                border: 5px #fff solid
+                box-shadow: 0 0 10px #444
+            .name_user, .title_name
+                font-size: 30px
+                color: white
+                font-weight: 900
+                text-shadow: rgb(224 224 224) 1px 1px 5px
+                text-align: center
+                margin: 20px auto 0
+            .name_user
+
+            .title_name
+                margin: 0
+                font-size: 20px
+
+            

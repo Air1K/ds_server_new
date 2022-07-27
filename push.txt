@@ -1,0 +1,9 @@
+git init
+git status
+git add -A
+git config --global user.email "veremeenkom91@gmail.com"
+git config --global user.name "Air1K"
+git commit -a -m "server ds"
+git remote add origin https://github.com/Air1K/web-front-ds.git
+git branch -M main
+git push -u origin main
