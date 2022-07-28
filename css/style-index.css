@@ -1,10 +1,17 @@
 *{
     box-sizing: border-box;
-    font-family: 'Conv_allercyrillic';
-    /* cursor: url("../cursor/mucursor.png") 38 38, auto; */
     cursor: none;
     
 }
+
+.content *{
+    font-family: 'Conv_allercyrillic';
+}
+
+.box-content *{
+    font: 700 normal 1em 'tahoma';
+}
+
 @font-face {
 	font-family: 'Conv_allercyrillic';
 	src: url('../fonts/allercyrillic.eot');

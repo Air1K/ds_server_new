@@ -148,11 +148,6 @@ body {
   font-size: 21px;
 }
 
-.box-content * {
-  font: normal "tahoma";
-  font-weight: 300;
-}
-
 .box-content::before {
   content: "";
   position: absolute;
@@ -176,7 +171,7 @@ body {
   text-shadow: #e0e0e0 1px 1px 5px;
 }
 .text-box h1 {
-  font-size: 60px;
+  font-size: 3vw;
   font: "tahoma";
   font-weight: 900;
 }
@@ -190,8 +185,7 @@ body {
 }
 
 .uet > span {
-  font-size: 60px;
-  font: "tahoma";
+  font-size: 3vw;
   font-weight: 900;
   text-shadow: #e0e0e0 3px 3px 5px;
 }
@@ -684,12 +678,6 @@ span {
     opacity: 0;
   }
 }
-.word {
-  margin: auto;
-  color: white;
-  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
-}
-
 .bg-image {
   z-index: 2;
   filter: blur(1px);
@@ -787,6 +775,105 @@ span {
 .admininfo .sekt_inf .block .title_name {
   margin: 0;
   font-size: 20px;
+}
+
+.vstup_block .sekt_inf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.0392156863);
+  padding: 40px;
+  width: 100%;
+}
+.vstup_block .sekt_inf a {
+  transition: 0.2s linear;
+}
+.vstup_block .sekt_inf a:hover {
+  transform: scale(1.1);
+  border: 2px solid #2bff00;
+  box-shadow: 0 0 0px #2bff00;
+  -webkit-transform: scale(1.1);
+  color: green;
+}
+.vstup_block .sekt_inf a:hover i {
+  color: green;
+}
+.vstup_block .sekt_inf .text-info {
+  width: 80%;
+}
+.vstup_block * {
+  color: #ffffff;
+  font: 700 normal 1em "tahoma";
+  text-align: justify;
+}
+.vstup_block * .bottom_add_admin {
+  text-transform: uppercase;
+  text-align: left;
+  width: 17%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font: 600 normal 0.7em "tahoma";
+  height: 50px;
+  border: 2px solid #ffff00;
+  box-shadow: 0 0 10px #ffff00;
+}
+.vstup_block * .bottom_add_admin i {
+  font-size: 1.4vw;
+}
+
+.title-bottom {
+  margin: 15vw 0;
+  position: relative;
+  height: 40vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.title-bottom .oop_video_blur {
+  -webkit-filter: blur(50px);
+  -moz-filter: blur(50px);
+  -o-filter: blur(50px);
+  -ms-filter: blur(50px);
+  filter: blur(50px);
+  z-index: 1;
+}
+.title-bottom video {
+  width: 100vw;
+  z-index: 2;
+  opacity: 1;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  position: absolute;
+  top: 0;
+}
+.title-bottom .word, .title-bottom ._text-vvod {
+  z-index: 3;
+  color: white;
+  min-height: 64px;
+  font: 700 normal 2.5em "tahoma";
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+}
+.title-bottom .word {
+  display: flex;
+  justify-content: center;
+}
+.title-bottom ._text-vvod {
+  animation: _text-anim 0.5s infinite;
+}
+
+@keyframes _text-anim {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -340,7 +340,7 @@ const text1 = new IntersectionObserver(entries => {
 
 
 
-var words = ['Hi i like HTML', 'I also like css', 'Lorem ipsum dolor sit amet', ' consectetur adipiscing elit', 'sed do eiusmod tempor incididunt'],
+var words = ['No osu!-No Life', 'лидирующий сервер по osu', 'Наши админы будут заботиться о вас', 'Чтобы все ваше время', 'проведенное на сервере ','сопровождалось позитивом'],
     part,
     i = 0,
     offset = 0,
@@ -383,9 +383,9 @@ var wordflick = function () {
   },speed);
 };
 
-// $(document).ready(function () {
-//   wordflick();
-// });
+$(document).ready(function () {
+  wordflick();
+});
 
 function schow_mem_kach(){
 	
