@@ -26,7 +26,6 @@ h1 {
   pointer-events: none;
   top: 50%;
   left: 50%;
-  pointer-events: none;
   z-index: 10000;
 }
 #cursor.hiden, #aura.hiden {
@@ -823,16 +822,19 @@ span {
 }
 
 .title-bottom {
-  margin: 15vw 0;
   position: relative;
-  height: 40vw;
+  margin: 20vw 0 0;
+  height: 56vw;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   text-transform: uppercase;
 }
 .title-bottom .oop_video_blur {
+  width: 100vw;
+  top: -50px;
   -webkit-filter: blur(50px);
   -moz-filter: blur(50px);
   -o-filter: blur(50px);
@@ -852,21 +854,27 @@ span {
   position: absolute;
   top: 0;
 }
-.title-bottom .word, .title-bottom ._text-vvod {
+.title-bottom .textand_ {
+  margin-bottom: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.title-bottom .textand_ .word, .title-bottom ._text-vvod {
   z-index: 3;
   color: white;
   min-height: 64px;
   font: 700 normal 2.5em "tahoma";
   text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
-.title-bottom .word {
+.title-bottom .textand_ .word {
   display: flex;
   justify-content: center;
 }
-.title-bottom ._text-vvod {
+.title-bottom .textand_ ._text-vvod {
   animation: _text-anim 0.5s infinite;
 }
-
 @keyframes _text-anim {
   0% {
     opacity: 1;
@@ -874,6 +882,16 @@ span {
   100% {
     opacity: 0;
   }
+}
+.no_schow_top_panel {
+  transform: translate(0, -100%);
+}
+
+.on_off_cursor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */

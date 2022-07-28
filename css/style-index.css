@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
-    cursor: none;
-    
+    /* cursor: none; */
+    pointer-events: auto;
 }
 
 .content *{
@@ -100,7 +100,7 @@ body, html{
     /* border: 1px solid black; */
     
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
-    
+    transition: 0.5s linear;
     color: rgb(0, 0, 0);
     position: -webkit-sticky;
     position: sticky;
@@ -284,4 +284,95 @@ margin-top: 10px;
     100% {
         transform:rotate(360deg);
     }
+  }
+
+  .border-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 30px;
+    margin: 10px 20px;
+    position: relative;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background: none;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 3;
+  }
+  .border-button:before, .border-button:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+  .border-button:before {
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+  }
+  .border-button:after {
+    top: 0;
+    right: 0;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: 0s ease opacity .4s, .2s ease width, .2s ease height .2s;
+  }
+  .border-button:hover:before, 
+  .border-button:hover:after {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+  }
+  .border-button:hover:before {
+    transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+  }
+  .border-button:hover:after {
+    transition: 0s ease opacity .4s, .2s ease height .4s, .2s ease width .6s;
+  }
+  .border-button:hover {
+    background: rgba(255, 255, 255, .2);
+  }
+
+
+  .switch-btn:hover{
+    cursor: pointer;
+  }
+  .switch-btn {
+    display: inline-block;
+    width: 40px; /* ширина */
+    height: 20px; /* высота */
+    border-radius: 19px; /* радиус скругления */
+    background: #bfbfbf; /* цвет фона */
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    pointer-events: fill;
+    /* cursor: pointer; */
+    position: relative;
+    transition-duration: 300ms; /* анимация */
+  }
+  .switch-btn::after {
+    content: "";
+    height: 20px; /* высота кнопки */
+    width: 20px; /* ширина кнопки */
+    border-radius: 17px;
+    background: #fff; /* цвет кнопки */
+    top: 0px; /* положение кнопки по вертикали относительно основы */
+    left: 0px; /* положение кнопки по горизонтали относительно основы */
+    transition-duration: 300ms; /* анимация */
+    position: absolute;
+    z-index: 1;
+  }
+  .switch-on {
+    background: #118c4e;
+  }
+  .switch-on::after {
+    left: 20px;
   }

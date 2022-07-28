@@ -446,3 +446,51 @@ const kach_mem = new IntersectionObserver(entries => {
   });
 kach_mem.observe(document.querySelector('.mem-kach'));
 
+
+let up_skroll = 0;
+let down_skroll = 0;
+$(document).ready(function() {
+	$(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
+	  delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
+	  if (delta >= 0) {
+		up_skroll++;
+		down_skroll = 0;
+		if(up_skroll > 3){
+			console.log("style_strok_mem_kach");
+			$('.content').removeClass( 'no_schow_top_panel' );
+		}
+	  } else {
+		up_skroll = 0;
+		down_skroll++;
+		if(down_skroll > 3){
+			$('.content').addClass( 'no_schow_top_panel' );
+			
+		}
+	  }
+	});
+  })
+
+  
+  $('.switch-btn').click(function(){
+	$(this).toggleClass('switch-on');
+	if($(".switch-btn").hasClass("switch-on")) {
+		// cursor.classList.addClass('cursor');
+  		// aura.classList.addClass('aura');
+		cursor.id = 'cursor';
+		cursor.className = 'cursor'
+		aura.id = 'aura';
+		aura.className = 'aura'
+		document.body.style.cursor = 'none';
+	}
+	document.body.style.cursor = 'none';
+	if(!$(".switch-btn").hasClass("switch-on")) {
+		cursor.classList.remove('cursor');
+  		aura.classList.remove('aura');
+		cursor.removeAttribute("id");
+  		aura.removeAttribute("id");
+		  
+		  document.body.style.cursor = 'auto';
+		
+		
+	}
+});

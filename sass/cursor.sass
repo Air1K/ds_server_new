@@ -20,9 +20,10 @@ h1
     display: block
     position: fixed
     pointer-events: none
+    // pointer-events: none
     top: 50%
     left: 50%
-    pointer-events: none
+    // pointer-events: none
     z-index: 10000
     &.hiden
         -o-transform: none !important
@@ -732,10 +733,12 @@ span
                 font-size: 1.4vw
 
 .title-bottom
-    margin: 15vw 0 
     position: relative
-    height: 40vw
+    margin: 20vw 0 0
+    height: 56vw
     .oop_video_blur
+        width: 100vw
+        top: -50px
         -webkit-filter: blur(50px)
         -moz-filter: blur(50px)
         -o-filter: blur(50px)
@@ -757,21 +760,38 @@ span
     display: flex
     justify-content: center
     align-items: center
-    text-transform: uppercase     
-    .word, ._text-vvod
+    flex-direction: column
+    text-transform: uppercase   
+    .textand_ 
+        margin-bottom: 5vw 
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 3  
+    .textand_ .word, ._text-vvod
         z-index: 3
         color: white
         min-height: 64px
         font: 700 normal 2.5em 'tahoma'
         text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324
-    .word
+    .textand_ .word
         display: flex
         justify-content: center
-    ._text-vvod
+    .textand_ ._text-vvod
         animation: _text-anim 0.5s infinite
+    .border-button
 
 @keyframes _text-anim
     0%
         opacity: 1
     100%
         opacity: 0
+
+.no_schow_top_panel
+    transform: translate(0, -100%)
+
+.on_off_cursor
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
