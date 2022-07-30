@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    /* cursor: none; */
     pointer-events: auto;
 }
 
@@ -340,9 +339,6 @@ margin-top: 10px;
   }
 
 
-  .switch-btn:hover{
-    cursor: pointer;
-  }
   .switch-btn {
     display: inline-block;
     width: 40px; /* ширина */

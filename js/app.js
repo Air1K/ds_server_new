@@ -47,7 +47,7 @@ document.onscroll = function (e) {
 		  // если элемент появился
 		  if (entry.isIntersecting) {
 			// добавить ему CSS-класс
-			fonmem.style.cssText = "top: "+(840-((vertical_position*50)/100))+"px;";
+			fonmem.style.cssText = "transform: translateY("+(840-((vertical_position*50)/100))+"px);";
 			// console.log(vertical_position);
 		  }
 		});
@@ -70,10 +70,10 @@ let new_wert_pos = vertical_position - height_content_bottom;
 		  if (entry.isIntersecting) {
 			// добавить ему CSS-класс 
 			poz_top++;
-			content_top_tt_koll1_el1.style.cssText = "top: "+(1600-((vertical_position*50)/100))+"px; transform: rotate("+((new_wert_pos*2)/100)+"deg) translateX("+((new_wert_pos*6)/100)+"px);";
-			content_top_tt_koll1_el2.style.cssText = "top: "+(2200-((vertical_position*60)/100))+"px; transform: rotate("+((new_wert_pos*1.5)/100)+"deg) translateX("+((new_wert_pos*1)/100)+"px);";
-			content_top_tt_koll2_el1.style.cssText = "top: "+(3200-((vertical_position*90)/100))+"px; transform: rotate("+(-(new_wert_pos*1)/100)+"deg) translateX("+(-(new_wert_pos*3)/100)+"px);";
-			content_top_tt_koll2_el2.style.cssText = "top: "+(1000-((vertical_position*30)/100))+"px; transform: rotate("+(-(new_wert_pos*0.4)/100)+"deg) translateX("+(-(new_wert_pos*1)/100)+"px);";
+			content_top_tt_koll1_el1.style.cssText = "transform: translateY("+(600-((vertical_position*30)/100))+"px) rotate("+((new_wert_pos*2)/100)+"deg) translateX("+((new_wert_pos*6)/100)+"px);";
+			content_top_tt_koll1_el2.style.cssText = "transform: translateY("+(2200-((vertical_position*60)/100))+"px) rotate("+((new_wert_pos*1.5)/100)+"deg) translateX("+((new_wert_pos*1)/100)+"px);";
+			content_top_tt_koll2_el1.style.cssText = "transform: translateY("+(3200-((vertical_position*90)/100))+"px) rotate("+(-(new_wert_pos*1)/100)+"deg) translateX("+(-(new_wert_pos*3)/100)+"px);";
+			content_top_tt_koll2_el2.style.cssText = "transform: translateY("+(1000-((vertical_position*30)/100))+"px) rotate("+(-(new_wert_pos*0.4)/100)+"deg) translateX("+(-(new_wert_pos*1)/100)+"px);";
 
 			//-------------рамки
 
@@ -393,6 +393,7 @@ function schow_mem_kach(){
 let vizibl_mem_kach = true;
 let kach_mem_num_img = 1;
 const kach_mems = document.querySelector(".mem-kach");
+kach_mems.style.cssText = `opacity: 0; translite: 0.4s;`;
 const bg_image_blur = document.querySelector(".bg-image-blur");
 const topblok = document.querySelector(".topblok");
 const bg_image = document.querySelector(".bg-image");
@@ -402,7 +403,7 @@ const kach_mem = new IntersectionObserver(entries => {
 	entries.forEach(entry => {
 	  if (entry.isIntersecting) {
 		vizibl_mem_kach = true;
-
+		kach_mems.style.cssText = `opacity: 1;`;
 		bg_image_blur.style.cssText = `background: url('../img-2/mem-kach/kach${kach_mem_num_img}.jpg')0% 0% / cover; position: absolute; width: 800px; height: 500px;`;
 		bg_image.style.cssText = `background: url('../img-2/mem-kach/kach${kach_mem_num_img}.jpg')0% 0% / cover; position: absolute; width: 800px; height: 500px;`;
 		
@@ -439,6 +440,7 @@ const kach_mem = new IntersectionObserver(entries => {
 	  }
 	  if (!entry.isIntersecting) {
 		vizibl_mem_kach = false;
+		kach_mems.style.cssText = `opacity: 0; translite: 0.4s;`;
 		kach_mems.classList.remove('anim_mem_kach');
 		// topblok.classList.remove('text_anim_mem');
 	  }
@@ -469,8 +471,8 @@ $(document).ready(function() {
 	  }
 	});
   })
-
-  
+  document.body.style.cursor = 'none';
+  $(".border-button").css("cursor","none");
   $('.switch-btn').click(function(){
 	$(this).toggleClass('switch-on');
 	if($(".switch-btn").hasClass("switch-on")) {
@@ -481,6 +483,13 @@ $(document).ready(function() {
 		aura.id = 'aura';
 		aura.className = 'aura'
 		document.body.style.cursor = 'none';
+		var paragraphs = document.querySelectorAll("a");
+		for (var i = 0, length = paragraphs.length; i < length; i++) { 
+  			paragraphs[i].style.cursor = 'none';
+		}
+		$(".switch-btn").css("cursor","none");
+		$(".border-button").css("cursor","none");
+		
 	}
 	document.body.style.cursor = 'none';
 	if(!$(".switch-btn").hasClass("switch-on")) {
@@ -488,9 +497,13 @@ $(document).ready(function() {
   		aura.classList.remove('aura');
 		cursor.removeAttribute("id");
   		aura.removeAttribute("id");
-		  
-		  document.body.style.cursor = 'auto';
-		
+		var paragraphs = document.querySelectorAll("a");
+		for (var i = 0, length = paragraphs.length; i < length; i++) { 
+			paragraphs[i].style.cursor = 'pointer';
+		}
+		document.body.style.cursor = 'auto';
+		$(".switch-btn").css("cursor","pointer");
+		$(".border-button").css("cursor","pointer");
 		
 	}
 });

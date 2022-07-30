@@ -314,7 +314,9 @@ body
 
 .krug-osu
     position: absolute
-    left: 100px
+    width: 30vw
+    height: 20vw
+    left: calc( 50% - 800px )
     .conthitcircleoverlay-1
         opacity: 0
         position: relative
@@ -470,7 +472,7 @@ span
 .fon1
     position: absolute
     z-index: 3
-    width: 1300px
+    width: 1200px
     height: 600px
     background-color: rgb(24,23,28)
     top:-360px
@@ -502,7 +504,7 @@ span
 
 .content-top-tt-koll1-el1, .content-top-tt-koll1-el2, .content-top-tt-koll2-el1, .content-top-tt-koll2-el2
     position: relative
-    transition: .2s
+    transition: .1s
     top: 300px
     margin-bottom: 65% 
     display: flex
@@ -609,7 +611,7 @@ span
 
 .bg-image-blur, .bg-image 
     background: url('')
-    position:absolute
+    position: absolute
     top:0
     left:0
     width: 100%
@@ -779,7 +781,6 @@ span
         justify-content: center
     .textand_ ._text-vvod
         animation: _text-anim 0.5s infinite
-    .border-button
 
 @keyframes _text-anim
     0%
@@ -795,3 +796,39 @@ span
     justify-content: center
     align-items: center
     flex-direction: column
+
+.footer-bottom
+    width: 100%
+    height: 24vw
+    display: flex
+    * a, div
+        color: #fff
+        font-size: 19px
+        text-align: left
+        white-space: nowrap
+    // background-color: #444444
+    > div
+        display: flex
+        flex-direction: column
+        align-content: center
+        justify-content: flex-start
+        align-items: center
+        width: 25%
+        height: 100%
+        background-color: #615d5d
+        img
+            transform: rotate(-10deg)
+            margin: 40px 0
+            width: 80%
+            height: 11%
+            background-size: 100%
+            background-position: center
+
+.nav_menu_koll1
+    display: flex
+    flex-direction: column
+    align-content: center
+    justify-content: flex-start
+    align-items: center
+    a, div
+        margin: 5px 20px 5px 20px

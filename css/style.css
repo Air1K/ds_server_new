@@ -281,7 +281,9 @@ body {
 
 .krug-osu {
   position: absolute;
-  left: 100px;
+  width: 30vw;
+  height: 20vw;
+  left: calc(50% - 800px);
 }
 .krug-osu .conthitcircleoverlay-1 {
   opacity: 0;
@@ -527,7 +529,7 @@ span {
 .fon1 {
   position: absolute;
   z-index: 3;
-  width: 1300px;
+  width: 1200px;
   height: 600px;
   background-color: rgb(24, 23, 28);
   top: -360px;
@@ -564,7 +566,7 @@ span {
 
 .content-top-tt-koll1-el1, .content-top-tt-koll1-el2, .content-top-tt-koll2-el1, .content-top-tt-koll2-el2 {
   position: relative;
-  transition: 0.2s;
+  transition: 0.1s;
   top: 300px;
   margin-bottom: 65%;
   display: flex;
@@ -684,11 +686,13 @@ span {
 
 .bg-image-blur, .bg-image {
   background: url("");
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
+
 .bg-image-blur {
   z-index: 1;
   -webkit-filter: blur(20px);
@@ -875,6 +879,7 @@ span {
 .title-bottom .textand_ ._text-vvod {
   animation: _text-anim 0.5s infinite;
 }
+
 @keyframes _text-anim {
   0% {
     opacity: 1;
@@ -892,6 +897,47 @@ span {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.footer-bottom {
+  width: 100%;
+  height: 24vw;
+  display: flex;
+}
+.footer-bottom * a, .footer-bottom div {
+  color: #fff;
+  font-size: 19px;
+  text-align: left;
+  white-space: nowrap;
+}
+.footer-bottom > div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  background-color: #615d5d;
+}
+.footer-bottom > div img {
+  transform: rotate(-10deg);
+  margin: 40px 0;
+  width: 80%;
+  height: 11%;
+  background-size: 100%;
+  background-position: center;
+}
+
+.nav_menu_koll1 {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav_menu_koll1 a, .nav_menu_koll1 div {
+  margin: 5px 20px 5px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
