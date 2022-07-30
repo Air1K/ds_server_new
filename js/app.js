@@ -19,6 +19,9 @@ const fon_content_tt1_2 = document.querySelector(".fon-content-tt1_2");
 const fon_content_tt2_1 = document.querySelector(".fon-content-tt2_1");
 const fon_content_tt2_2 = document.querySelector(".fon-content-tt2_2");
 
+
+const title_bottom = document.querySelector(".title-bottom");
+
 function getRandomInt(max) {
 	return Math.floor(Math.random() * max);
   }
@@ -107,6 +110,16 @@ let new_wert_pos = vertical_position - height_content_bottom;
 
 	  //---------------4
 	  //style_css_();
+	  var scrollTop     = $(window).scrollTop(),
+		elementOffset = $('.title-bottom').offset().top,
+		distance      = (elementOffset - scrollTop);
+		if(distance < 0){
+			$(".title-bottom").css("position","fixed");
+		}
+		else{
+			$(".title-bottom").css("position","relative");
+		}
+	  
   }
 
 let X_aura = 0;

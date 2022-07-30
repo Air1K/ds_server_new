@@ -827,6 +827,7 @@ span {
 
 .title-bottom {
   position: relative;
+  z-index: 5;
   margin: 20vw 0 0;
   height: 56vw;
   width: 100%;
@@ -900,9 +901,14 @@ span {
 }
 
 .footer-bottom {
+  background-color: rgb(24, 23, 28);
+  position: relative;
+  z-index: 6;
+  margin-top: 10vw;
   width: 100%;
   height: 24vw;
   display: flex;
+  justify-content: center;
 }
 .footer-bottom * a, .footer-bottom div {
   color: #fff;
@@ -916,17 +922,42 @@ span {
   align-content: center;
   justify-content: flex-start;
   align-items: center;
-  width: 25%;
+  margin-right: 4vw;
   height: 100%;
-  background-color: #615d5d;
+  position: relative;
 }
 .footer-bottom > div img {
+  position: absolute;
   transform: rotate(-10deg);
   margin: 40px 0;
-  width: 80%;
-  height: 11%;
+  width: 250px;
+  height: 40px;
   background-size: 100%;
   background-position: center;
+}
+.footer-bottom > div .head_koll2, .footer-bottom > div .head_koll1, .footer-bottom > div .head_koll3, .footer-bottom > div .head_koll4 {
+  max-height: 22.67px;
+  margin: 50px 0;
+}
+.footer-bottom > div .head_koll1 {
+  opacity: 0;
+}
+.footer-bottom > div .title_koll2, .footer-bottom > div .title_koll3, .footer-bottom > div .title_koll4 {
+  display: flex;
+  flex-direction: column;
+  align-content: left;
+}
+.footer-bottom > div .title_koll2 a, .footer-bottom > div .title_koll2 div, .footer-bottom > div .title_koll3 a, .footer-bottom > div .title_koll3 div, .footer-bottom > div .title_koll4 a, .footer-bottom > div .title_koll4 div {
+  margin: 5px 0;
+}
+.footer-bottom .coll2_bottom, .footer-bottom .coll3_bottom, .footer-bottom .coll4_bottom {
+  display: flex;
+  flex-direction: column;
+  place-content: flex-start;
+  align-items: flex-start;
+}
+.footer-bottom .coll2_bottom {
+  padding-left: 2vw;
 }
 
 .nav_menu_koll1 {
