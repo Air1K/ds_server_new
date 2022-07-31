@@ -76,10 +76,6 @@ h1 {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-#aura * a:hover {
-  transform: translate(-50%, -50%) scale(1.5);
-  opacity: 0.5;
-}
 
 body {
   background-color: #888888;
@@ -827,6 +823,7 @@ span {
 
 .title-bottom {
   position: relative;
+  z-index: 5;
   z-index: 5;
   margin: 20vw 0 0;
   height: 56vw;
