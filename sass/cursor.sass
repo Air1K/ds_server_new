@@ -74,9 +74,6 @@ h1
     animation-duration: 5s
     animation-iteration-count: infinite
     animation-timing-function: linear
-    a:hover
-        transform: translate(-50%, -50%) scale(1.5)
-        opacity: .5
 
 body
     background-color: #888888
@@ -803,8 +800,9 @@ span
     position: relative
     z-index: 6
     margin-top: 10vw
+    margin-bottom: 5vw
     width: 100%
-    height: 24vw
+    height: 100%
     display: flex
     justify-content: center
     * a, div
@@ -840,8 +838,28 @@ span
             align-content: left
             a, div
                 margin: 5px 0
+            .href_site
+                a
+                    i
+                        transition: .3s
+                        margin: 10px 10px 0 0
+                        font-size: 25px
+                    :hover
+                        transform: scale(1.5)
+                    .fa-youtube:hover
+                        color: rgb(255, 4, 4)
+                    .fa-discord:hover
+                        color: #5662f7
+                    .fa-vk:hover
+                        color: #478ab8
+                    .fa-telegram:hover
+                        color: #168bd9
+                    .fa-github:hover
+                        color: #5e6b79
+        .title_koll4
+            height: 100%
+            justify-content: space-between
     .coll2_bottom, .coll3_bottom, .coll4_bottom
-        
         display: flex
         flex-direction: column
         place-content: flex-start
@@ -858,3 +876,5 @@ span
     a, div
         margin: 5px 20px 5px 20px
 
+.content_bottom
+    position: relative

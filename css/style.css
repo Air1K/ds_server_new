@@ -76,7 +76,7 @@ h1 {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-#aura a:hover {
+#aura * a:hover {
   transform: translate(-50%, -50%) scale(1.5);
   opacity: 0.5;
 }
@@ -905,8 +905,9 @@ span {
   position: relative;
   z-index: 6;
   margin-top: 10vw;
+  margin-bottom: 5vw;
   width: 100%;
-  height: 24vw;
+  height: 100%;
   display: flex;
   justify-content: center;
 }
@@ -950,6 +951,33 @@ span {
 .footer-bottom > div .title_koll2 a, .footer-bottom > div .title_koll2 div, .footer-bottom > div .title_koll3 a, .footer-bottom > div .title_koll3 div, .footer-bottom > div .title_koll4 a, .footer-bottom > div .title_koll4 div {
   margin: 5px 0;
 }
+.footer-bottom > div .title_koll2 .href_site a i, .footer-bottom > div .title_koll3 .href_site a i, .footer-bottom > div .title_koll4 .href_site a i {
+  transition: 0.3s;
+  margin: 10px 10px 0 0;
+  font-size: 25px;
+}
+.footer-bottom > div .title_koll2 .href_site a :hover, .footer-bottom > div .title_koll3 .href_site a :hover, .footer-bottom > div .title_koll4 .href_site a :hover {
+  transform: scale(1.5);
+}
+.footer-bottom > div .title_koll2 .href_site a .fa-youtube:hover, .footer-bottom > div .title_koll3 .href_site a .fa-youtube:hover, .footer-bottom > div .title_koll4 .href_site a .fa-youtube:hover {
+  color: rgb(255, 4, 4);
+}
+.footer-bottom > div .title_koll2 .href_site a .fa-discord:hover, .footer-bottom > div .title_koll3 .href_site a .fa-discord:hover, .footer-bottom > div .title_koll4 .href_site a .fa-discord:hover {
+  color: #5662f7;
+}
+.footer-bottom > div .title_koll2 .href_site a .fa-vk:hover, .footer-bottom > div .title_koll3 .href_site a .fa-vk:hover, .footer-bottom > div .title_koll4 .href_site a .fa-vk:hover {
+  color: #478ab8;
+}
+.footer-bottom > div .title_koll2 .href_site a .fa-telegram:hover, .footer-bottom > div .title_koll3 .href_site a .fa-telegram:hover, .footer-bottom > div .title_koll4 .href_site a .fa-telegram:hover {
+  color: #168bd9;
+}
+.footer-bottom > div .title_koll2 .href_site a .fa-github:hover, .footer-bottom > div .title_koll3 .href_site a .fa-github:hover, .footer-bottom > div .title_koll4 .href_site a .fa-github:hover {
+  color: #5e6b79;
+}
+.footer-bottom > div .title_koll4 {
+  height: 100%;
+  justify-content: space-between;
+}
 .footer-bottom .coll2_bottom, .footer-bottom .coll3_bottom, .footer-bottom .coll4_bottom {
   display: flex;
   flex-direction: column;
@@ -969,6 +997,10 @@ span {
 }
 .nav_menu_koll1 a, .nav_menu_koll1 div {
   margin: 5px 20px 5px 20px;
+}
+
+.content_bottom {
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
