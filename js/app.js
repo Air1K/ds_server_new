@@ -496,12 +496,15 @@ $(document).ready(function() {
 	  }
 	});
   })
+  res();
+  function res(){
   document.body.style.cursor = 'none';
   var paragraphs = document.querySelectorAll("a");
 		for (var i = 0, length = paragraphs.length; i < length; i++) { 
   			paragraphs[i].style.cursor = 'none';
 		}
   $(".border-button").css("cursor","none");
+	}
   $('.switch-btn').click(function(){
 	$(this).toggleClass('switch-on');
 	if($(".switch-btn").hasClass("switch-on")) {
